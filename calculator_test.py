@@ -12,9 +12,12 @@ class Test(unittest.TestCase):
         result = self.calculator.subtract(4,8)
         self.assertEqual(result,-4)
     def test_0_mult(self):
-        result = self.calculator.multiply(4,8)
-        self.assertEqual(result,32)
-        
+        result = self.calculator.multiply(4,5)
+        self.assertEqual(result,20)
+    def test_0_power(self):
+        result = self.calculator.power(4,8)
+        self.assertEqual(result,12)
+
 
 if __name__ == '__main__':
     # begin the unittest.main()

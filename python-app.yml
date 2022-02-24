@@ -33,6 +33,13 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with unittest
       run: |
+       def test_0_add(self):
+        result = self.calculator.add(4,8)
+        self.assertEqual(result,12)
+    def test_0_subtract(self):
+        result = self.calculator.subtract(4,8)
+        self.assertEqual(result,-4)
+      
         #Dear CCK students, 
         #You have to insert here your code so it 
         #will run in the last steps

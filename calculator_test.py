@@ -11,9 +11,9 @@ class Test(unittest.TestCase):
     def test_0_subtract(self):
         result = self.calculator.subtract(4,8)
         self.assertEqual(result,-4)
-    # def test_0_mult(self):
-    #     result = self.calculator.multiply(4,5)
-    #     self.assertEqual(result,20)
+    def test_0_mult(self):
+        result = self.calculator.multiply(4,5)
+        self.assertEqual(result,20)
     # def test_0_power(self):
     #     result = self.calculator.power(4,2)
     #     self.assertEqual(result,16)

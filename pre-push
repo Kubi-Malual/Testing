@@ -6,7 +6,6 @@ if [ "$current_branch" = "main" ]; then
         #Dear CCK students, 
         #You have to insert here your code
         #to test the software
-		
     if [ $? -eq 0 ]; then
         # tests passed, proceed to prepare commit message
         exit 0

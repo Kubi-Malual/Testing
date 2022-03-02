@@ -1,0 +1,72 @@
+[1mdiff --git a/__pycache__/calculator_test.cpython-310.pyc b/__pycache__/calculator_test.cpython-310.pyc[m
+[1mindex b0348d6..6cdc551 100644[m
+Binary files a/__pycache__/calculator_test.cpython-310.pyc and b/__pycache__/calculator_test.cpython-310.pyc differ
+[1mdiff --git a/calculator_test.py b/calculator_test.py[m
+[1mindex 6c6e534..bf965cf 100644[m
+[1m--- a/calculator_test.py[m
+[1m+++ b/calculator_test.py[m
+[36m@@ -14,9 +14,9 @@[m [mclass Test(unittest.TestCase):[m
+     def test_0_mult(self):[m
+         result = self.calculator.multiply(4,5)[m
+         self.assertEqual(result,20)[m
+[31m-    # def test_0_power(self):[m
+[31m-    #     result = self.calculator.power(4,2)[m
+[31m-    #     self.assertEqual(result,16)[m
+[32m+[m[32m    def test_0_power(self):[m
+[32m+[m[32m        result = self.calculator.power(4,2)[m
+[32m+[m[32m        self.assertEqual(result,16)[m
+ if __name__ == '__main__':[m
+     # begin the unittest.main()[m
+     unittest.main()[m
+\ No newline at end of file[m
+[1mdiff --git a/python-app.yml b/python-app.yml[m
+[1mdeleted file mode 100644[m
+[1mindex a173ca8..0000000[m
+[1m--- a/python-app.yml[m
+[1m+++ /dev/null[m
+[36m@@ -1,45 +0,0 @@[m
+[31m-# This workflow will install Python dependencies, run tests and lint with a single version of Python[m
+[31m-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions[m
+[31m-[m
+[31m-name: Python application[m
+[31m-[m
+[31m-on:[m
+[31m-  push:[m
+[31m-    branches: [ main ][m
+[31m-  pull_request:[m
+[31m-    branches: [ main ][m
+[31m-[m
+[31m-jobs:[m
+[31m-  build:[m
+[31m-[m
+[31m-    runs-on: ubuntu-latest[m
+[31m-[m
+[31m-    steps:[m
+[31m-    - uses: actions/checkout@v2[m
+[31m-    - name: Set up Python 3.10[m
+[31m-      uses: actions/setup-python@v2[m
+[31m-      with:[m
+[31m-        python-version: "3.10"[m
+[31m-    - name: Install dependencies[m
+[31m-      run: |[m
+[31m-        python -m pip install --upgrade pip[m
+[31m-        pip install flake8 pytest[m
+[31m-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi[m
+[31m-    - name: Lint with flake8[m
+[31m-      run: |[m
+[31m-        # stop the build if there are Python syntax errors or undefined names[m
+[31m-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics[m
+[31m-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide[m
+[31m-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics[m
+[31m-    - name: Test with unittest[m
+[31m-      run: |[m
+[31m-       def test_0_add(self):[m
+[31m-        result = self.calculator.add(4,8)[m
+[31m-        self.assertEqual(result,12)[m
+[31m-    def test_0_subtract(self):[m
+[31m-        result = self.calculator.subtract(4,8)[m
+[31m-        self.assertEqual(result,-4)[m
+[31m-      [m
+[31m-        #Dear CCK students, [m
+[31m-        #You have to insert here your code so it [m
+[31m-        #will run in the last steps[m

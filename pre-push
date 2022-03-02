@@ -5,6 +5,7 @@ if [ "$current_branch" = "main" ]; then
     echo "You are about to commit on master. I will run your tests first..."
         #Dear CCK students, 
         #You have to insert here your code
+        python -m unittest calculator_test
         #to test the software
     if [ $? -eq 0 ]; then
         # tests passed, proceed to prepare commit message
